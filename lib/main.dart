@@ -1,3 +1,4 @@
+import 'package:ebi/ui/widgets/my_button.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -104,6 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            MyButton(textChild: 'sign in', onTap: () {}),
+
             const Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
