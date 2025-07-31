@@ -16,7 +16,7 @@ class AppTextFormFieldTheme {
     ),
     hintStyle: const TextStyle().copyWith(
       fontSize: 14,
-      color: AppColors.textSecondary,
+      color: AppColors.softGrey,
     ),
     errorStyle: const TextStyle().copyWith(
       fontStyle: FontStyle.normal,
@@ -29,11 +29,11 @@ class AppTextFormFieldTheme {
     ),
     enabledBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(7),
-      borderSide: const BorderSide(width: 1, color: AppColors.dark),
+      borderSide: const BorderSide(width: 1, color: AppColors.primary),
     ),
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(7),
-      borderSide: const BorderSide(width: 1.5, color: AppColors.dark),
+      borderSide: const BorderSide(width: 1.5, color: AppColors.primary),
     ),
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(7),
@@ -55,7 +55,10 @@ class AppTextFormFieldTheme {
       fontSize: 14,
       color: AppColors.white,
     ),
-    hintStyle: const TextStyle().copyWith(fontSize: 14, color: AppColors.grey),
+    hintStyle: const TextStyle().copyWith(
+      fontSize: 14,
+      color: AppColors.softGrey,
+    ),
     errorStyle: const TextStyle().copyWith(
       fontStyle: FontStyle.normal,
       color: AppColors.error,
@@ -67,7 +70,7 @@ class AppTextFormFieldTheme {
     ),
     enabledBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1, color: AppColors.grey),
+      borderSide: const BorderSide(width: 1, color: AppColors.primary),
     ),
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),

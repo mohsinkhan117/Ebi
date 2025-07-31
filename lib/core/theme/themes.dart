@@ -56,6 +56,7 @@ class AppTheme {
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.dark,
     textTheme: AppTextTheme.darkTextTheme,
+    
     appBarTheme: AppAppBarTheme.darkAppBarTheme,
     checkboxTheme: AppCheckboxTheme.darkCheckboxTheme,
     bottomSheetTheme: AppBottomSheetTheme.darkBottomSheetTheme,

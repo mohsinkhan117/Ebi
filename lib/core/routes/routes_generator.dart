@@ -1,5 +1,7 @@
 // lib/core/routes/routes_generator.dart
 
+import 'package:ebi/ui/views/auth/signin_view/signin_view.dart';
+import 'package:ebi/ui/views/auth/signup_view/signup_view.dart';
 import 'package:flutter/material.dart';
 
 class RouterGenerator {
@@ -9,11 +11,11 @@ class RouterGenerator {
       // case SplashView.routeName:
       //   return SplashView.route();
 
-      // case SignupView.routeName:
-      //   return SignupView.route();
+      case SignupView.routeName:
+        return SignupView.route();
 
-      // case SigninView.routeName:
-      //   return SigninView.route();
+      case SignInView.routeName:
+        return SignInView.route();
       // case PlantListView.routeName:
       //   return PlantListView.route();
 
