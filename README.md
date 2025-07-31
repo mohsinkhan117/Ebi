@@ -1,4 +1,4 @@
-# ebi_project
+# ebi
 
 A new Flutter project.
 

@@ -1,4 +1,4 @@
-package com.example.ebi_project
+package com.example.ebi
 
 import io.flutter.embedding.android.FlutterActivity
 

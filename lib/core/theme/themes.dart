@@ -1,14 +1,14 @@
 // lib/core/theme/themes.dart
 
-import 'package:ebi_project/core/theme/app_colors.dart';
-import 'package:ebi_project/core/theme/custom_theme/appbar_theme.dart';
-import 'package:ebi_project/core/theme/custom_theme/bottom_sheet_theme.dart';
-import 'package:ebi_project/core/theme/custom_theme/checkbox_theme.dart';
-import 'package:ebi_project/core/theme/custom_theme/chip_theme.dart';
-import 'package:ebi_project/core/theme/custom_theme/elevated_button_theme.dart';
-import 'package:ebi_project/core/theme/custom_theme/outlined_button_theme.dart';
-import 'package:ebi_project/core/theme/custom_theme/text_field_theme.dart';
-import 'package:ebi_project/core/theme/custom_theme/text_theme.dart';
+import 'package:ebi/core/theme/app_colors.dart';
+import 'package:ebi/core/theme/custom_theme/appbar_theme.dart';
+import 'package:ebi/core/theme/custom_theme/bottom_sheet_theme.dart';
+import 'package:ebi/core/theme/custom_theme/checkbox_theme.dart';
+import 'package:ebi/core/theme/custom_theme/chip_theme.dart';
+import 'package:ebi/core/theme/custom_theme/elevated_button_theme.dart';
+import 'package:ebi/core/theme/custom_theme/outlined_button_theme.dart';
+import 'package:ebi/core/theme/custom_theme/text_field_theme.dart';
+import 'package:ebi/core/theme/custom_theme/text_theme.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {

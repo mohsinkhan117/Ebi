@@ -1,6 +1,6 @@
 // lib/core/theme/custom_theme/elevated_button_theme.dart
 
-import 'package:ebi_project/core/theme/app_colors.dart';
+import 'package:ebi/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppElevatedButtonTheme {

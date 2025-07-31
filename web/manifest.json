@@ -1,6 +1,6 @@
 {
-    "name": "ebi_project",
-    "short_name": "ebi_project",
+    "name": "ebi",
+    "short_name": "ebi",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
