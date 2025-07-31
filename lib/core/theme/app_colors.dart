@@ -6,8 +6,8 @@ class AppColors {
   AppColors._();
 
   // App Basic Colors
-  static const Color primary = Color(0xFF7C9889);
-  static const Color secondary = Color(0xFF7A9877);
+  static const Color primary = Color(0xFFF08FAF);
+  static const Color secondary = Color(0xFFFFF3F7);
   static const Color tertiaryColor = Color(
     0xFFF3F4F6,
   ); // Light Gray - Neutral Background
@@ -28,10 +28,7 @@ class AppColors {
   static const Gradient primaryLinerGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [
-      Color(0xFF1E3A8A), // Indigo
-      Color(0xFF3B82F6), // Blue
-    ],
+    colors: [Color(0xFFF08FAF), Color(0xFFFFDAE6), Color(0xFFF7F7F7)],
   );
 
   // Text Colors
@@ -50,7 +47,7 @@ class AppColors {
   static Color darkContainer = textWhite.withOpacity(0.08);
 
   // Button Colors
-  static const Color buttonPrimary = Color(0xFF1E3A8A); // Indigo
+  static const Color buttonPrimary = Color(0xFFF08FAF);
   static const Color buttonSecondary = Color(0xFF3B82F6); // Blue
   static const Color buttonDisabled = Color(0xFFCBD5E1); // Muted Gray
   static const LinearGradient buttonActiveLinearGradientColor = LinearGradient(
@@ -77,7 +74,7 @@ class AppColors {
   static const Color darkerGrey = Color(0xFF374151);
   static const Color darkGrey = Color(0xFF6B7280);
   static const Color grey = Color(0xFFD1D5DB);
-  static const Color softGrey = Color(0xFFE5E7EB);
+  static const Color softGrey = Color(0xFF828282);
   static const Color lightGrey = Color(0xFFF3F4F6);
   static const Color white = Color(0xFFFFFFFF);
 
