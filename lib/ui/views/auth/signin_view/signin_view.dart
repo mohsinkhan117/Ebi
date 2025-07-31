@@ -4,6 +4,7 @@ import 'package:ebi/core/theme/sizes.dart';
 import 'package:ebi/core/utils/device_utils.dart';
 import 'package:ebi/ui/views/auth/signin_view/signin_view_model.dart';
 import 'package:ebi/ui/views/auth/signup_view/signup_view.dart';
+import 'package:ebi/ui/views/home/home_view.dart';
 import 'package:ebi/ui/widgets/my_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -54,7 +55,15 @@ class SignInView extends StatelessWidget {
                     sizedBox,
                     MyTextFormField(controller: model.signInController),
 
-                    MyButton(textChild: 'Continue', onTap: () {}),
+                    MyButton(
+                      textChild: 'Continue',
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeView()),
+                        );
+                      },
+                    ),
                     sizedBox,
 
                     Row(

@@ -64,17 +64,17 @@ class HomeView extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                ListTile(
-                  title: CircleAvatar(
-                    child: Image.asset('assets/images/abaya_type/1.png'),
-                  ),
-                  subtitle: Text('Black \n Abbayas'),
-                ),
-              ],
-            ),
+            // ListView(
+            //   scrollDirection: Axis.horizontal,
+            //   children: [
+            //     ListTile(
+            //       title: CircleAvatar(
+            //         child: Image.asset('assets/images/abaya_type/1.png'),
+            //       ),
+            //       subtitle: Text('Black \n Abbayas'),
+            //     ),
+            //   ],
+            // ),
           ],
         ),
       ),
