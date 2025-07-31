@@ -1,5 +1,6 @@
 import 'package:ebi/core/theme/themes.dart';
-import 'package:ebi/ui/views/auth/signin_view/signin_view.dart';
+import 'package:ebi/ui/catagories/catagories_view.dart';
+import 'package:ebi/ui/catagories/catagories_view_model.dart';
 import 'package:ebi/ui/views/auth/signin_view/signin_view_model.dart';
 import 'package:ebi/ui/views/auth/signup_view/signup_view_model.dart';
 import 'package:ebi/ui/views/home/home_view_model.dart';
@@ -12,7 +13,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => SigninViewModel()),
         ChangeNotifierProvider(create: (_) => SignupViewModel()),
-        ChangeNotifierProvider(create: (_) => HomeViewModel()),
+        ChangeNotifierProvider(create: (_) => CatagoriesViewModel()),
       ],
       child: const MyApp(),
     ),
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignInView(),
+      home: CatagoriesView(),
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,

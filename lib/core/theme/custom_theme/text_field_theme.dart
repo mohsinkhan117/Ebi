@@ -33,7 +33,7 @@ class AppTextFormFieldTheme {
     ),
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(7),
-      borderSide: const BorderSide(width: 1.5, color: AppColors.primary),
+      borderSide: const BorderSide(width: 1.5, color: AppColors.grey),
     ),
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(7),
@@ -74,7 +74,7 @@ class AppTextFormFieldTheme {
     ),
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1.5, color: AppColors.primary),
+      borderSide: const BorderSide(width: 1.5, color: AppColors.grey),
     ),
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
