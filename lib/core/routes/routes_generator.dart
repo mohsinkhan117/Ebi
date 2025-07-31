@@ -1,5 +1,6 @@
 // lib/core/routes/routes_generator.dart
 
+import 'package:ebi/ui/catagories/catagories_view.dart';
 import 'package:ebi/ui/views/auth/signin_view/signin_view.dart';
 import 'package:ebi/ui/views/auth/signup_view/signup_view.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +17,8 @@ class RouterGenerator {
 
       case SignInView.routeName:
         return SignInView.route();
-      // case PlantListView.routeName:
-      //   return PlantListView.route();
+      case CatagoriesView.routeName:
+        return CatagoriesView.route();
 
       default:
         return _errorRoute();
