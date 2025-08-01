@@ -6,11 +6,15 @@ class MyTextfield extends StatelessWidget {
   TextEditingController controller;
   bool isObscure;
   IconData? prefixIcon;
+  double horizontalPadding;
+  double verticalPadding;
 
   MyTextfield({
     required this.hintText,
     required this.controller,
     required this.isObscure,
+    this.horizontalPadding = 20,
+    this.verticalPadding = 10,
     super.key,
     this.prefixIcon,
   });
@@ -18,7 +22,10 @@ class MyTextfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      padding: EdgeInsets.symmetric(
+        vertical: verticalPadding,
+        horizontal: horizontalPadding,
+      ),
       child: SizedBox(
         height: 50,
         child: TextField(
@@ -48,4 +55,3 @@ class MyTextfield extends StatelessWidget {
     );
   }
 }
-

@@ -1,5 +1,6 @@
 import 'package:ebi/core/theme/app_colors.dart';
 import 'package:ebi/core/utils/device_utils.dart';
+import 'package:ebi/ui/views/catagories/catagories_view.dart';
 import 'package:ebi/ui/widgets/my_textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class BlackAbayaScreen extends StatelessWidget {
           isObscure: false,
           prefixIcon: Icons.search,
         ),
-        centerTitle: true,
+        centerTitle: false,
         automaticallyImplyLeading: false,
         elevation: 0,
       ),

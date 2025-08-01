@@ -1,5 +1,6 @@
 import 'package:ebi/core/theme/app_colors.dart';
 import 'package:ebi/core/theme/sizes.dart';
+import 'package:ebi/ui/views/catagories/black_abayas/black_abaya.dart';
 import 'package:ebi/ui/views/catagories/catagories_view_model.dart';
 import 'package:ebi/ui/widgets/my_textfield.dart';
 import 'package:flutter/material.dart';
@@ -104,7 +105,18 @@ class CatagoriesView extends StatelessWidget {
                     itemCount: categories[selectedCategory]!.length,
                     itemBuilder: (context, index) {
                       final item = categories[selectedCategory]![index];
-                      return ListTile(title: Text(item), onTap: () {});
+                      return ListTile(
+                        title: Text(item),
+                        onTap: () {
+                          print('Pushed ');
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => BlackAbayaScreen(),
+                            ),
+                          );
+                        },
+                      );
                     },
                   ),
                 ),
