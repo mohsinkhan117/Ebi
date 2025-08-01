@@ -3,6 +3,7 @@
 import 'package:ebi/app_shell_view_model.dart';
 import 'package:ebi/core/theme/app_colors.dart';
 import 'package:ebi/ui/views/catagories/catagories_view.dart';
+import 'package:ebi/ui/views/checkout/checkout_view.dart';
 import 'package:ebi/ui/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -38,7 +39,7 @@ class AppShell extends StatelessWidget {
               controller: model.pageController,
               physics: const NeverScrollableScrollPhysics(),
               onPageChanged: model.onPageChanged,
-              children: [HomeView(), CatagoriesView()],
+              children: [HomeView(), CatagoriesView(), CheckOutView()],
             ),
             bottomNavigationBar: Container(
               decoration: BoxDecoration(
