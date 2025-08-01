@@ -39,7 +39,7 @@ class AppShell extends StatelessWidget {
               controller: model.pageController,
               physics: const NeverScrollableScrollPhysics(),
               onPageChanged: model.onPageChanged,
-              children: [HomeView(), CatagoriesView(), CheckOutView()],
+              children: [HomeView(), CatagoriesView(), checkoutView()],
             ),
             bottomNavigationBar: Container(
               decoration: BoxDecoration(

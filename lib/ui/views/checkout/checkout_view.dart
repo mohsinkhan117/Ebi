@@ -1,77 +1,53 @@
+import 'package:ebi/ui/views/checkout/checkout_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class CheckOutView extends StatelessWidget {
-  CheckOutView({super.key});
-
-  final List<Map<String, dynamic>> items = [
-    {'title': 'SHIPPING', 'content': 'Add shipping address', 'trailing': false},
-    {
-      'title': 'DELIVERY',
-      'content': 'FREE\nStandard | 3-4 days',
-      'trailing': true,
-    },
-    {'title': 'PAYMENT', 'content': 'Visa *1234', 'trailing': true},
-    {'title': 'PROMOS', 'content': 'Apply promo code', 'trailing': false},
-  ];
-
-  final List<Map<String, dynamic>> products = [
-    {
-      'price': 10.99,
-      'image': 'assets/images/homeImages/1.png',
-      'description': 'This is First class cotton available only with us',
-      'brand': 'Aliya',
-      'quantity': 01,
-      'product-name': 'Black Abayya Stiched',
-    },
-    {
-      'price': 8.99,
-      'image': 'assets/images/homeImages/3.png',
-      'description': 'The is Europian Abbaya Lenga',
-      'brand': 'Natasha',
-      'quantity': 02,
-      'product-name': 'White Scrave UnStiched',
-    },
-  ];
+class checkoutView extends StatelessWidget {
+  checkoutView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Checkout'), centerTitle: true),
-      body: Expanded(
-        child: ListView(
-          padding: const EdgeInsets.only(bottom: 20),
-          children: [
-            // Main sections
-            ...List.generate(items.length, (index) {
-              final item = items[index];
-              return ListTile(
-                leading: Text(
-                  item['title'],
-                  style: Theme.of(
-                    context,
-                  ).textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
+      appBar: AppBar(title: const Text('checkout'), centerTitle: true),
+      body: Consumer<checkoutViewModel>(
+        builder: (context, model, child) {
+          return Expanded(
+            child: ListView(
+              padding: const EdgeInsets.only(bottom: 20),
+              children: [
+                // Main sections
+                ...List.generate(model.items.length, (index) {
+                  final item = model.items[index];
+                  return ListTile(
+                    leading: Text(
+                      item['title'],
+                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    title: Text(item['content']),
+                    trailing: const Icon(Icons.arrow_forward_ios),
+                  );
+                }),
+
+                ItemsSections(items: model.products),
+
+                // Order summary
+                const Divider(),
+                PriceSummarySection(),
+
+                // Order button
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Place order'),
+                  ),
                 ),
-                title: Text(item['content']),
-                trailing: const Icon(Icons.arrow_forward_ios),
-              );
-            }),
-
-            ItemsSections(items: products),
-
-            // Order summary
-            const Divider(),
-            PriceSummarySection(),
-
-            // Order button
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: ElevatedButton(
-                onPressed: () {},
-                child: const Text('Place order'),
-              ),
+              ],
             ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }

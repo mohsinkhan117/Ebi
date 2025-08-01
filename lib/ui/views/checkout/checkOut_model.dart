@@ -1,4 +1,4 @@
-class CheckoutData {
+class checkoutData {
   final ShippingAddress? shippingAddress;
   final DeliveryOption deliveryOption;
   final PaymentMethod paymentMethod;
@@ -9,7 +9,7 @@ class CheckoutData {
   final double total;
   final String? promoCode;
 
-  CheckoutData({
+  checkoutData({
     this.shippingAddress,
     required this.deliveryOption,
     required this.paymentMethod,
