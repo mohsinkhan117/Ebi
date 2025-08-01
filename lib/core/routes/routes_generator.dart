@@ -1,8 +1,8 @@
 // lib/core/routes/routes_generator.dart
 
-import 'package:ebi/ui/catagories/catagories_view.dart';
 import 'package:ebi/ui/views/auth/signin_view/signin_view.dart';
 import 'package:ebi/ui/views/auth/signup_view/signup_view.dart';
+import 'package:ebi/ui/views/catagories/catagories_view.dart';
 import 'package:flutter/material.dart';
 
 class RouterGenerator {

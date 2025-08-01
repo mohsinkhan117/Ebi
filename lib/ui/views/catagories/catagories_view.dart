@@ -1,6 +1,6 @@
 import 'package:ebi/core/theme/app_colors.dart';
 import 'package:ebi/core/theme/sizes.dart';
-import 'package:ebi/ui/catagories/catagories_view_model.dart';
+import 'package:ebi/ui/views/catagories/catagories_view_model.dart';
 import 'package:ebi/ui/widgets/my_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -96,7 +96,6 @@ class CatagoriesView extends StatelessWidget {
                   ),
                 ),
 
-                
                 Expanded(
                   child: ListView.separated(
                     separatorBuilder: (context, index) =>

@@ -1,9 +1,11 @@
+import 'package:ebi/app_shell_view_model.dart';
 import 'package:ebi/core/theme/themes.dart';
- import 'package:ebi/ui/catagories/catagories_view_model.dart';
+
 import 'package:ebi/ui/views/auth/signin_view/signin_view.dart';
 import 'package:ebi/ui/views/auth/signin_view/signin_view_model.dart';
 import 'package:ebi/ui/views/auth/signup_view/signup_view_model.dart';
- import 'package:ebi/ui/views/home/home_view_model.dart';
+import 'package:ebi/ui/views/catagories/catagories_view_model.dart';
+import 'package:ebi/ui/views/home/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -11,8 +13,10 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
+        
         ChangeNotifierProvider(create: (_) => SigninViewModel()),
         ChangeNotifierProvider(create: (_) => SignupViewModel()),
+        ChangeNotifierProvider(create: (_)=>AppShellViewModel()),
         ChangeNotifierProvider(create: (_) => CatagoriesViewModel()),
         ChangeNotifierProvider(create: (_) => HomeViewModel()),
       ],

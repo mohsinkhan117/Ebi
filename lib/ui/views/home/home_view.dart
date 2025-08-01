@@ -1,6 +1,6 @@
 import 'package:ebi/core/theme/app_colors.dart';
 import 'package:ebi/core/utils/device_utils.dart';
-import 'package:ebi/ui/catagories/catagories_view.dart';
+import 'package:ebi/ui/views/catagories/catagories_view.dart';
 import 'package:ebi/ui/views/home/home_view_model.dart';
 import 'package:ebi/ui/widgets/my_textfield.dart';
 import 'package:flutter/material.dart';
