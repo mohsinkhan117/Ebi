@@ -1,5 +1,6 @@
 import 'package:ebi/core/theme/app_colors.dart';
 import 'package:ebi/core/utils/device_utils.dart';
+import 'package:ebi/ui/views/catagories/black_abayas/black_abaya.dart';
 import 'package:ebi/ui/views/catagories/catagories_view.dart';
 import 'package:ebi/ui/views/home/home_view_model.dart';
 import 'package:ebi/ui/widgets/my_textfield.dart';
@@ -163,81 +164,78 @@ class CategorySection extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           GestureDetector(
-            onTap: () {},
-            child: Container(
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 30,
-                    child: Image.asset('assets/images/abaya_type/1.png'),
-                  ),
-                  Text('   Black \n Abbayas'),
-                ],
-              ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => BlackAbayaScreen()),
+              );
+            },
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 30,
+                  child: Image.asset('assets/images/abaya_type/1.png'),
+                ),
+                Text('   Black \n Abbayas'),
+              ],
             ),
           ),
           SizedBox(width: 15),
           GestureDetector(
             onTap: () {},
-            child: Container(
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 30,
-                    child: Image.asset('assets/images/abaya_type/2.png'),
-                  ),
-                  Text(' Colored \n Abbayas'),
-                ],
-              ),
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 30,
+                  child: Image.asset('assets/images/abaya_type/2.png'),
+                ),
+                Text(' Colored \n Abbayas'),
+              ],
             ),
           ),
           SizedBox(width: 15),
           GestureDetector(
             onTap: () {},
-            child: Container(
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 30,
-                    child: Image.asset('assets/images/abaya_type/3.png'),
-                  ),
-                  Text('  Niqabs'),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(width: 15),
-
-          GestureDetector(
-            onTap: () {},
-            child: Container(
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 30,
-                    child: Image.asset('assets/images/abaya_type/4.png'),
-                  ),
-                  Text('   Scarves  '),
-                ],
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                CircleAvatar(
+                  radius: 30,
+                  child: Image.asset('assets/images/abaya_type/3.png'),
+                ),
+                Text('  Niqabs'),
+              ],
             ),
           ),
           SizedBox(width: 15),
 
           GestureDetector(
             onTap: () {},
-            child: Container(
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 30,
-                    child: Image.asset('assets/images/abaya_type/1.png'),
-                  ),
-                  Text('   Under \n Abbaya'),
-                ],
-              ),
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 30,
+                  child: Image.asset('assets/images/abaya_type/4.png'),
+                ),
+                Text('   Scarves  '),
+              ],
+            ),
+          ),
+          SizedBox(width: 15),
+
+          GestureDetector(
+            onTap: () {},
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 30,
+                  child: Image.asset('assets/images/abaya_type/1.png'),
+                ),
+                Text('   Under \n Abbaya'),
+              ],
             ),
           ),
         ],
