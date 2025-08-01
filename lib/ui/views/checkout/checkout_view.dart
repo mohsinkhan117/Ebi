@@ -124,7 +124,12 @@ class ItemsSections extends StatelessWidget {
                 ],
               ),
 
-              trailing: Text('\$${item['price'].toStringAsFixed(2)}'),
+              trailing: Text(
+                '\$${item['price']}',
+                style: Theme.of(
+                  context,
+                ).textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.w600),
+              ),
             );
           },
         ),
@@ -139,7 +144,7 @@ class PriceSummarySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
