@@ -55,6 +55,7 @@ class CatagoriesView extends StatelessWidget {
         final selectedCategory = categoryKeys[model.selectedIndex];
 
         return Scaffold(
+          resizeToAvoidBottomInset: false,
           appBar: AppBar(
             title: MyTextfield(
               hintText: 'Search',
@@ -71,29 +72,31 @@ class CatagoriesView extends StatelessWidget {
                 // Left Sidebar: Category Icons
                 Padding(
                   padding: const EdgeInsets.only(left: AppSizes.defaultSpace),
-                  child: Column(
-                    children: List.generate(5, (index) {
-                      final assets = [
-                        catagory1,
-                        catagory2,
-                        catagory3,
-                        catagory4,
-                        catagory5,
-                      ];
-                      final labels = [
-                        'Black\nAbayas',
-                        'Colored\nAbayas',
-                        'Niqabs',
-                        'Scarves',
-                        'Under\nAbayas',
-                      ];
-                      return CatagoryItem(
-                        label: labels[index],
-                        asset: assets[index],
-                        isSelected: model.selectedIndex == index,
-                        onTap: () => model.selectCategory(index),
-                      );
-                    }),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: List.generate(5, (index) {
+                        final assets = [
+                          catagory1,
+                          catagory2,
+                          catagory3,
+                          catagory4,
+                          catagory5,
+                        ];
+                        final labels = [
+                          'Black\nAbayas',
+                          'Colored\nAbayas',
+                          'Niqabs',
+                          'Scarves',
+                          'Under\nAbayas',
+                        ];
+                        return CatagoryItem(
+                          label: labels[index],
+                          asset: assets[index],
+                          isSelected: model.selectedIndex == index,
+                          onTap: () => model.selectCategory(index),
+                        );
+                      }),
+                    ),
                   ),
                 ),
 
