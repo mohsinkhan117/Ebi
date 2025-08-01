@@ -2,8 +2,16 @@ import 'package:ebi/ui/views/checkout/checkout_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class checkoutView extends StatelessWidget {
-  checkoutView({super.key});
+class CheckoutView extends StatelessWidget {
+  static const String routeName = '/checkout-view';
+  static Route route() {
+    return MaterialPageRoute(
+      builder: (context) => CheckoutView(),
+      settings: RouteSettings(name: routeName),
+    );
+  }
+
+  const CheckoutView({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -4,6 +4,7 @@ import 'package:ebi/app_shell.dart';
 import 'package:ebi/ui/views/auth/signin_view/signin_view.dart';
 import 'package:ebi/ui/views/auth/signup_view/signup_view.dart';
 import 'package:ebi/ui/views/catagories/catagories_view.dart';
+import 'package:ebi/ui/views/checkout/checkout_view.dart';
 import 'package:flutter/material.dart';
 
 class RouterGenerator {
@@ -24,6 +25,9 @@ class RouterGenerator {
 
       case AppShell.routeName:
         return AppShell.route();
+
+      case CheckoutView.routeName:
+        return CheckoutView.route();
 
       default:
         return _errorRoute();
