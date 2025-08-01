@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ebi/core/helper_functions/helper_function.dart';
 import 'package:ebi/core/theme/app_colors.dart';
 import 'package:ebi/core/utils/device_utils.dart';
 import 'package:ebi/ui/catagories/catagories_view.dart';
@@ -10,116 +8,121 @@ import 'package:provider/provider.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
+
   TextEditingController textController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Consumer<HomeViewModel>(
       builder: (context, viewModel, child) {
         return Scaffold(
           body: SafeArea(
-            child: Column(
-              children: [
-                MyTextfield(
-                  hintText: 'Search',
-                  controller: textController,
-                  isObscure: false,
-                  prefixIcon: Icons.search_rounded,
-                ),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  MyTextfield(
+                    hintText: 'Search',
+                    controller: textController,
+                    isObscure: false,
+                    prefixIcon: Icons.search_rounded,
+                  ),
 
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      PillsCard(
-                        description: 'Favorites',
-                        iconData: Icons.favorite_border,
-                      ),
-                      PillsCard(
-                        description: 'History',
-                        iconData: Icons.history,
-                      ),
-                      PillsCard(
-                        description: 'Orders',
-                        iconData: Icons.document_scanner_outlined,
-                      ),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        PillsCard(
+                          description: 'Favorites',
+                          iconData: Icons.favorite_border,
+                        ),
+                        PillsCard(
+                          description: 'History',
+                          iconData: Icons.history,
+                        ),
+                        PillsCard(
+                          description: 'Orders',
+                          iconData: Icons.document_scanner_outlined,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                SizedBox(height: 5),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 5,
+                  SizedBox(height: 5),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 5,
+                    ),
+                    child: Image.asset('assets/images/Slidshow3.png'),
                   ),
-                  child: Image.asset('assets/images/Slidshow3.png'),
-                ),
-                SizedBox(height: 5),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Categories',
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      ),
-                      SizedBox(width: 15),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => CatagoriesView(),
+                  SizedBox(height: 5),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Categories',
+                          style: Theme.of(context).textTheme.headlineSmall,
+                        ),
+                        SizedBox(width: 15),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CatagoriesView(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Color(0xf000000),
+                              shape: BoxShape.circle,
                             ),
-                          );
-                        },
-                        child: Container(
+                            child: Icon(Icons.arrow_forward_ios),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: CategorySection(),
+                  ),
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Best Sellers',
+                          style: Theme.of(context).textTheme.headlineSmall,
+                        ),
+                        SizedBox(width: 20),
+                        Container(
                           decoration: BoxDecoration(
                             color: Color(0xf000000),
                             shape: BoxShape.circle,
                           ),
                           child: Icon(Icons.arrow_forward_ios),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: CategorySection(),
-                ),
-                SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Best Sellers',
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      ),
-                      SizedBox(width: 20),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xf000000),
-                          shape: BoxShape.circle,
-                        ),
-                        child: Icon(Icons.arrow_forward_ios),
-                      ),
-                    ],
+                  SizedBox(height: 20),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.35,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: viewModel.imagePath.length,
+                      itemBuilder: (context, index) {
+                        return BestSellerTile(index: index);
+                      },
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                Expanded(
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: viewModel.imagePath.length,
-                    itemBuilder: (context, index) {
-                      return BestSellerTile(index: index);
-                    },
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         );
