@@ -1,5 +1,6 @@
 // lib/core/routes/routes_generator.dart
 
+import 'package:ebi/app_shell.dart';
 import 'package:ebi/ui/views/auth/signin_view/signin_view.dart';
 import 'package:ebi/ui/views/auth/signup_view/signup_view.dart';
 import 'package:ebi/ui/views/catagories/catagories_view.dart';
@@ -17,8 +18,12 @@ class RouterGenerator {
 
       case SignInView.routeName:
         return SignInView.route();
+
       case CatagoriesView.routeName:
         return CatagoriesView.route();
+
+      case AppShell.routeName:
+        return AppShell.route();
 
       default:
         return _errorRoute();
